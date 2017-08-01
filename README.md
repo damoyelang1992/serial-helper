@@ -2,7 +2,7 @@
 
 qt5 串口助手 跨平台兼容
 
-代码说明文档： http://damoyelang1992.oschina.io/serial-helper/doc/build/html/
+代码说明文档： https://damoyelang1992.github.io/serial-helper/doc/build/html/
 
 ## 兼容平台：
 
@@ -31,7 +31,7 @@ virtualenv --no-site-packages venv
 
 source venv/bin/activate
 
-git clone https://git.oschina.net/damoyelang1992/serial-helper.git
+git clone https://github.com/damoyelang1992/serial-helper.git
 
 cd serial-helper
 
