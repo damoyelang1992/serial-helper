@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mainwindow module &mdash; noodles-serial-helper 0.1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="搜索" href="search.html"/>
+    <link rel="top" title="noodles-serial-helper 0.1.0 文档" href="index.html"/>
+        <link rel="up" title="serial-helper" href="modules.html"/>
+        <link rel="next" title="mainwindow_ui module" href="mainwindow_ui.html"/>
+        <link rel="prev" title="main module" href="main.html"/> 
+
+  
+  <script src="static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> noodles-serial-helper
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">serial-helper</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">mainwindow module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mainwindow_ui.html">mainwindow_ui module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nserial.html">nserial module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">noodles-serial-helper</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">serial-helper</a> &raquo;</li>
+        
+      <li>mainwindow module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="sources/mainwindow.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-mainwindow">
+<span id="mainwindow-module"></span><h1>mainwindow module<a class="headerlink" href="#module-mainwindow" title="永久链接至标题">¶</a></h1>
+<dl class="class">
+<dt id="mainwindow.MainWindow">
+<em class="property">class </em><code class="descclassname">mainwindow.</code><code class="descname">MainWindow</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#mainwindow.MainWindow" title="永久链接至目标">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QMainWindow</span></code>, <a class="reference internal" href="mainwindow_ui.html#mainwindow_ui.Ui_MainWindow" title="mainwindow_ui.Ui_MainWindow"><code class="xref py py-class docutils literal"><span class="pre">mainwindow_ui.Ui_MainWindow</span></code></a></p>
+<p>界面文件的各种操作方法实现，此类继承了 mainwindiw_ui，并对其进行操作，防止界面修改之后再次转化成 .py 代码丢失的问题</p>
+<dl class="method">
+<dt id="mainwindow.MainWindow.append_recv_data">
+<code class="descname">append_recv_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mainwindow.MainWindow.append_recv_data" title="永久链接至目标">¶</a></dt>
+<dd><p>把接收到的数据从 nserial 中的 Queue 队列中取出来并 append 到界面接收区</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">返回:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mainwindow.MainWindow.auto_send">
+<code class="descname">auto_send</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mainwindow.MainWindow.auto_send" title="永久链接至目标">¶</a></dt>
+<dd><p>根据设定的时间自动发送发送去的数据</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">返回:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mainwindow.MainWindow.auto_send_check_event">
+<code class="descname">auto_send_check_event</code><span class="sig-paren">(</span><em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#mainwindow.MainWindow.auto_send_check_event" title="永久链接至目标">¶</a></dt>
+<dd><p>自动发送数据 checkbox 选中与取消选中的事件处理</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><strong>state</strong> – checkbox 事件传递的信号，2位选中，0为取消选中</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mainwindow.MainWindow.do_append_recv_data">
+<code class="descname">do_append_recv_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mainwindow.MainWindow.do_append_recv_data" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mainwindow.MainWindow.do_close_serial_port">
+<code class="descname">do_close_serial_port</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mainwindow.MainWindow.do_close_serial_port" title="永久链接至目标">¶</a></dt>
+<dd><p>关闭串口并进行相应界面操作</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">返回:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mainwindow.MainWindow.do_open_serial_port">
+<code class="descname">do_open_serial_port</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mainwindow.MainWindow.do_open_serial_port" title="永久链接至目标">¶</a></dt>
+<dd><p>打开串口并改变相应界面操作</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">返回:</th><td class="field-body">不返回数据</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mainwindow.MainWindow.init_ports_combobox">
+<code class="descname">init_ports_combobox</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mainwindow.MainWindow.init_ports_combobox" title="永久链接至目标">¶</a></dt>
+<dd><p>初始化串口 combobox 串口号信息， 把程序扫描得到的串口添加到 combobox 的选项中</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">返回:</th><td class="field-body">不返回数据</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mainwindow.MainWindow.save_to_file">
+<code class="descname">save_to_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mainwindow.MainWindow.save_to_file" title="永久链接至目标">¶</a></dt>
+<dd><p>保存接收区的数据到文件</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">返回:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mainwindow.MainWindow.send_data">
+<code class="descname">send_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mainwindow.MainWindow.send_data" title="永久链接至目标">¶</a></dt>
+<dd><p>从界面发送方去获取数据并发送到串口</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">返回:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mainwindow.MainWindow.stop_show">
+<code class="descname">stop_show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mainwindow.MainWindow.stop_show" title="永久链接至目标">¶</a></dt>
+<dd><p>停止显示接收到的数据，为了防止数据丢失，不显示的时候就不读取 queue，此时数据暂存在 queue中，在下面显示的时候可以读取出来。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">返回:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mainwindow_ui.html" class="btn btn-neutral float-right" title="mainwindow_ui module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="main.html" class="btn btn-neutral" title="main module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Qinfei.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="static/jquery.js"></script>
+      <script type="text/javascript" src="static/underscore.js"></script>
+      <script type="text/javascript" src="static/doctools.js"></script>
+      <script type="text/javascript" src="static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
