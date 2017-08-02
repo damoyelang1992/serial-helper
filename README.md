@@ -1,4 +1,4 @@
-#serial-helper
+# serial-helper
 
 qt5 串口助手 跨平台兼容
 
