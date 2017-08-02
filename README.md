@@ -1,4 +1,3 @@
-https://git.oschina.net/damoyelang1992/serial-helper  下面粘贴说明
 #serial-helper
 
 qt5 串口助手 跨平台兼容
